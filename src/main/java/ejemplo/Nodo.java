@@ -1,4 +1,4 @@
-package ejemplo.grafo;
+package ejemplo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class Nodo {
 	
 	private String 		nombre;
-	private List<Arco>	arcos = new ArrayList<>();
+	private List<IArco>	arcos = new ArrayList<>();
 	
 	public Nodo() { }
 	
@@ -17,11 +17,11 @@ public class Nodo {
 		this.nombre = nombre;
 	}
 	
-	public void agregarArco(Arco arco) {
+	public void agregarArco(IArco arco) {
 		arcos.add(arco);
 	}
 
-	public List<Arco> getArcos() {
+	public List<IArco> getArcos() {
 		return arcos;
 	}
 	
@@ -29,7 +29,7 @@ public class Nodo {
 		List<Nodo> nodos = new ArrayList<>();
 		
 		// por cada arco donde el nodo es origen
-		for (Arco arco : arcos) {
+		for (IArco arco : arcos) {
 			// si el arco no es reflexivo
 			if (arco.getDestino() != this)
 				// agrega el nodo destino a la lista 

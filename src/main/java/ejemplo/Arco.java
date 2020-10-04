@@ -1,6 +1,10 @@
-package ejemplo.grafo;
+package ejemplo;
 
-public class Arco {
+/**
+ * Arco sin pesos
+ *
+ */
+public class Arco implements IArco {
 
 	private Nodo origen;
 	
