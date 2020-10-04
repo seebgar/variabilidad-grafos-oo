@@ -13,7 +13,7 @@ public class Ejemplo {
 
 			// Patron de estrategia
 			SeContainer container = SeContainerInitializer.newInstance().initialize();
-			Grafo g = container.select(Grafo.class).get();
+			IGrafo g = container.select(Grafo.class).get();
 			
 			System.out.println("*** ");
 			System.out.println(g.getClass().getName());
@@ -48,7 +48,7 @@ public class Ejemplo {
 
 			
 			
-			Grafo h = container.select(Grafo.class).get();
+			IGrafo h = container.select(Grafo.class).get();
 
 			h.addNodo("A");
 			h.addNodo("B");

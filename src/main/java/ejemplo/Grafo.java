@@ -11,7 +11,7 @@ import javax.enterprise.inject.se.SeContainerInitializer;
 public abstract class Grafo implements IGrafo {
 
 	List<Nodo> nodos = new ArrayList<>();
-	List<Arco> arcos = new ArrayList<>();
+	List<IArco> arcos = new ArrayList<>();
 	
 	public Grafo() { }
 	
